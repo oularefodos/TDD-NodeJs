@@ -3,17 +3,42 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www",
+    "start": "nodemon ./bin/www",
     "test": "jest --watchAll"
   },
   "dependencies": {
+    "awilix-express": "^8.0.0",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "express": "~4.16.1",
-    "morgan": "~1.9.1"
+    "morgan": "~1.9.1",
+    "structure": "^2.0.1",
+    "yup": "^1.2.0"
   },
   "devDependencies": {
+    "eslint": "^8.47.0",
     "jest": "^29.6.2",
+    "nodemon": "^3.0.1",
     "supertest": "^6.3.3"
+  },
+  "eslintConfig": {
+    "parserOptions": {
+      "ecmaVersion": 6
+    },
+    "extends": [
+      "eslint:recommended"
+    ],
+    "env": {
+      "node": true,
+      "jest": true,
+      "es6": true
+    },
+    "rules": {
+      "semi": "warn",
+      "quotes": [
+        "warn",
+        "single"
+      ]
+    }
   }
 }
